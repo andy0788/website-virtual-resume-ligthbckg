@@ -77,6 +77,11 @@
   }
   .topnav a:hover{color:var(--amber)}
   @media(max-width:640px){.topnav{display:none}}
+  .topbar-right{display:flex;align-items:center;gap:1.3rem}
+  .langswitch{display:flex;gap:.12rem;border:1px solid var(--ink-line);border-radius:20px;padding:.14rem}
+  .langbtn{font-family:'IBM Plex Mono',monospace;font-size:.66rem;letter-spacing:.06em;color:var(--bone-dim);background:none;border:0;cursor:pointer;padding:.26rem .52rem;border-radius:16px;transition:color .2s var(--ease),background .2s var(--ease)}
+  .langbtn:hover{color:var(--bone)}
+  .langbtn.on{background:var(--amber);color:var(--ink)}
 
   /* ---------- hero (cinematic) ---------- */
   .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
@@ -417,8 +422,6 @@
 
   /* =====================================================
      LIGHT / CREAM THEME  (standalone variant)
-     Cream page + dark text below the hero. The hero stays
-     dark because it sits over the video.
      ===================================================== */
   :root{
     --ink:#f4efe4; --ink-raise:#fffdf7; --ink-line:#e3dbca;
@@ -431,6 +434,10 @@
   .brand span{color:#e6a94a}
   .topnav a{color:#c3ccbf}
   .topnav a:hover{color:#e6a94a}
+  .langswitch{border-color:rgba(242,238,227,.28)}
+  .langbtn{color:#c3ccbf}
+  .langbtn:hover{color:#f2eee3}
+  .langbtn.on{background:#e6a94a;color:#1c2a22}
   .hero .eyebrow{color:#a6c0a8}
   h1{color:#f5f1e7}
   h1 em{color:#e6a94a}
@@ -453,14 +460,20 @@
 <header class="topbar" id="topbar">
   <div class="wrap topbar-inner">
     <a class="brand" href="#top">anunezandrade<span> · isu</span></a>
-    <nav class="topnav">
-      <a href="#about">Profile</a>
-      <a href="#research">Research</a>
-      <a href="#watch">Watch</a>
-      <a href="#tools">Toolbox</a>
-      <a href="#service">Writing</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <div class="topbar-right">
+      <nav class="topnav">
+      <a href="#about" data-i18n="nav.profile">Profile</a>
+      <a href="#research" data-i18n="nav.research">Research</a>
+      <a href="#watch" data-i18n="nav.watch">Watch</a>
+      <a href="#tools" data-i18n="nav.toolbox">Toolbox</a>
+      <a href="#service" data-i18n="nav.writing">Writing</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="langswitch" role="group" aria-label="Language">
+        <button class="langbtn on" data-lang="en" onclick="__setLang('en')">EN</button>
+        <button class="langbtn" data-lang="es" onclick="__setLang('es')">ES</button>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -477,16 +490,16 @@
     <div class="slate"><b></b>Ames, IA — 2026</div>
   </div>
   <div class="wrap hero-inner">
-    <p class="eyebrow">Quantitative Genetics · Iowa State University</p>
-    <a class="badge" href="#contact"><span class="pulse"></span>Attending WCGALP 2026 — let's connect</a>
-    <h1>The genetics of <em>living together</em>.</h1>
-    <p class="standfirst">I'm <b>Andrea Núñez Andrade</b>, a PhD candidate in animal breeding &amp; genetics studying <b>social genetic effects</b> — how one animal's genes ripple outward to shape the feeding time, competition for feeder space, and maternal traits of the group around it.</p>
+    <p class="eyebrow" data-i18n="hero.eyebrow">Quantitative Genetics · Iowa State University</p>
+    <a class="badge" href="#contact" data-i18n="hero.badge"><span class="pulse"></span>Attending WCGALP 2026 — let's connect</a>
+    <h1 data-i18n="hero.h1">The genetics of <em>living together</em>.</h1>
+    <p class="standfirst" data-i18n="hero.standfirst">I'm <b>Andrea Núñez Andrade</b>, a PhD candidate in animal breeding &amp; genetics studying <b>social genetic effects</b> — how one animal's genes ripple outward to shape the feeding time, competition for feeder space, and maternal traits of the group around it.</p>
     <div class="hero-links">
-      <a href="#research"><span class="dot"></span>Research</a>
+      <a href="#research" data-i18n="herolink.research"><span class="dot"></span>Research</a>
       <a href="https://github.com/andy0788" target="_blank" rel="noopener"><span class="dot"></span>GitHub</a>
       <a href="https://substack.com/@itsmeandreanicole" target="_blank" rel="noopener"><span class="dot"></span>Substack</a>
       <a href="https://www.linkedin.com/in/anunezandrade" target="_blank" rel="noopener"><span class="dot"></span>LinkedIn</a>
-      <a href="#contact"><span class="dot"></span>Contact</a>
+      <a href="#contact" data-i18n="herolink.contact"><span class="dot"></span>Contact</a>
     </div>
   </div>
 </section>
@@ -494,9 +507,9 @@
 <!-- FIGURES -->
 <div class="figs">
   <div class="wrap figs-inner">
-    <div class="fig"><div class="n">Large-scale</div><div class="l">Datasets, handled end to end</div></div>
-    <div class="fig"><div class="n">Feeding</div><div class="l">Automatic feeder data · repeated measures</div></div>
-    <div class="fig"><div class="n">Reproduction</div><div class="l">Sow performance data · repeated measures</div></div>
+    <div class="fig"><div class="n" data-i18n="fig1n">Large-scale</div><div class="l" data-i18n="fig1l">Datasets, handled end to end</div></div>
+    <div class="fig"><div class="n" data-i18n="fig2n">Feeding</div><div class="l" data-i18n="fig2l">Automatic feeder data · repeated measures</div></div>
+    <div class="fig"><div class="n" data-i18n="fig3n">Reproduction</div><div class="l" data-i18n="fig3l">Sow performance data · repeated measures</div></div>
   </div>
 </div>
 
@@ -504,27 +517,27 @@
 
   <!-- ABOUT -->
   <section class="block reveal" id="about">
-    <div class="sec-head"><p class="eyebrow">Profile</p><h2>From national traceability systems to social genetic effects.</h2></div>
+    <div class="sec-head"><p class="eyebrow" data-i18n="about.eyebrow">Profile</p><h2 data-i18n="about.h2">From national traceability systems to social genetic effects.</h2></div>
     <div class="about-grid">
       <div class="about-body">
-        <p>I build statistical models that separate an animal's <b>direct</b> genetic effect from its <b>social</b> one — the part of its neighbors' performance that traces back to its own genes.</p>
-        <p>My dissertation applies this idea across commercial swine populations: feeding time and competition for feeder space captured by automatic feeders, maternal traits in group-housed gestating sows, and a genomic search for the regions that drive both, in collaboration with <b>PIC</b> and <b>Topigs Norsvin</b>.</p>
-        <p>I grew up in Tegucigalpa, Honduras, and trained as an agronomist at <b>Zamorano University</b> under its "Learn by Doing" philosophy. After directing Honduras's <b>National Livestock Traceability System</b> at SENASA, I came to the University of Florida for a master's in animal genetics with Dr. Raluca Mateescu.</p>
-        <p>Along the way I've mentored international students through the Zamorano alumni network and kept a small Substack on science and writing.</p>
+        <p data-i18n="about.p1">I build statistical models that separate an animal's <b>direct</b> genetic effect from its <b>social</b> one — the part of its neighbors' performance that traces back to its own genes.</p>
+        <p data-i18n="about.p2">My dissertation applies this idea across commercial swine populations: feeding time and competition for feeder space captured by automatic feeders, maternal traits in group-housed gestating sows, and a genomic search for the regions that drive both, in collaboration with <b>PIC</b> and <b>Topigs Norsvin</b>.</p>
+        <p data-i18n="about.p3">I grew up in Tegucigalpa, Honduras, and trained as an agronomist at <b>Zamorano University</b> under its "Learn by Doing" philosophy. After directing Honduras's <b>National Livestock Traceability System</b> at SENASA, I came to the University of Florida for a master's in animal genetics with Dr. Raluca Mateescu.</p>
+        <p data-i18n="about.p4">Along the way I've mentored international students through the Zamorano alumni network and kept a small Substack on science and writing.</p>
       </div>
       <div class="about-side">
         <aside class="card">
-          <h3>Education</h3>
+          <h3 data-i18n="edu.h">Education</h3>
         <ul class="rowlist">
-          <li>PhD, Animal Breeding &amp; Genetics<span><a href="https://www.ans.iastate.edu/people/andrea-nunez" target="_blank" rel="noopener">Iowa State University</a> · exp. 2026 · adv. J.P. Steibel</span></li>
-          <li>M.S., Animal Sciences<span><a href="https://animal.ifas.ufl.edu/" target="_blank" rel="noopener">University of Florida</a> · adv. R. Mateescu</span></li>
-          <li>M.S., Project Management<span><a href="https://www.unitec.edu/estudios/postgrado/administracion-de-proyectos/" target="_blank" rel="noopener">UNITEC</a>, Honduras · planning and delivering research projects</span></li>
-          <li>B.S., Agronomy<span><a href="https://zamorano.edu/en/" target="_blank" rel="noopener">Zamorano University</a> · Learn by Doing · Pan-American, 80+ yrs</span></li>
+          <li><span data-i18n="degree1">PhD, Animal Breeding &amp; Genetics</span><span><a href="https://www.ans.iastate.edu/people/andrea-nunez" target="_blank" rel="noopener">Iowa State University</a><span data-i18n="edu1note"> · exp. 2026 · adv. J.P. Steibel</span></span></li>
+          <li><span data-i18n="degree2">M.S., Animal Sciences</span><span><a href="https://animal.ifas.ufl.edu/" target="_blank" rel="noopener">University of Florida</a><span data-i18n="edu2note"> · adv. R. Mateescu</span></span></li>
+          <li><span data-i18n="degree3">M.S., Project Management</span><span><a href="https://www.unitec.edu/estudios/postgrado/administracion-de-proyectos/" target="_blank" rel="noopener">UNITEC</a><span data-i18n="edu3note">, Honduras · planning and delivering research projects</span></span></li>
+          <li><span data-i18n="degree4">B.S., Agronomy</span><span><a href="https://zamorano.edu/en/" target="_blank" rel="noopener">Zamorano University</a><span data-i18n="edu4note"> · Learn by Doing · Pan-American, 80+ yrs</span></span></li>
         </ul>
-        <h3>Collaborators</h3>
+        <h3 data-i18n="collab.h">Collaborators</h3>
         <ul class="rowlist">
-          <li>PIC<span>Genetic improvement — swine</span></li>
-          <li>Topigs Norsvin<span>Commercial breeding data</span></li>
+          <li>PIC<span data-i18n="collab1note">Genetic improvement — swine</span></li>
+          <li>Topigs Norsvin<span data-i18n="collab2note">Commercial breeding data</span></li>
         </ul>
       </aside>
       </div>
@@ -533,81 +546,81 @@
 
   <!-- RESEARCH -->
   <section class="block reveal" id="research">
-    <div class="sec-head"><p class="eyebrow">Dissertation</p><h2>Three ways of asking the same question.</h2></div>
+    <div class="sec-head"><p class="eyebrow" data-i18n="research.eyebrow">Dissertation</p><h2 data-i18n="research.h2">Three ways of asking the same question.</h2></div>
 
     <article class="proj">
       <div class="proj-no">01</div>
       <div>
-        <h3>Follower effects on feeder occupation in finishing pigs</h3>
-        <p>Using automatic feeder data, I model how the pig that feeds just before you — the one you "follow" — leaves a genetic fingerprint on your own feeding time and competition for feeder space.</p>
+        <h3 data-i18n="proj1.h3">Follower effects on feeder occupation in finishing pigs</h3>
+        <p data-i18n="proj1.p">Using automatic feeder data, I model how the pig that feeds just before you — the one you "follow" — leaves a genetic fingerprint on your own feeding time and competition for feeder space.</p>
       </div>
     </article>
 
     <article class="proj">
       <div class="proj-no">02</div>
       <div>
-        <h3>Social genetic effects on maternal traits in group-housed gestating sows</h3>
-        <p>Group housing reshapes gestation for sows. I estimate the direct and social genetic components of maternal traits, testing whether selection that ignores pen-mates leaves welfare and productivity on the table.</p>
+        <h3 data-i18n="proj2.h3">Social genetic effects on maternal traits in group-housed gestating sows</h3>
+        <p data-i18n="proj2.p">Group housing reshapes gestation for sows. I estimate the direct and social genetic components of maternal traits, testing whether selection that ignores pen-mates leaves welfare and productivity on the table.</p>
       </div>
     </article>
 
     <article class="proj">
       <div class="proj-no">03</div>
       <div>
-        <h3>Single-step GWAS for direct and social genetic effects</h3>
-        <p>A proposed single-step GWAS to map the genomic regions behind both the direct and social components at once. <span class="status">In progress.</span></p>
+        <h3 data-i18n="proj3.h3">Single-step GWAS for direct and social genetic effects</h3>
+        <p data-i18n="proj3.p">A proposed single-step GWAS to map the genomic regions behind both the direct and social components at once. <span class="status">In progress.</span></p>
       </div>
     </article>
 
     <div class="earlier">
-      <p class="eyebrow">Master's research · University of Florida</p>
-      <h3>Breed composition &amp; GWAS for heat tolerance in Angus-Brahman cattle</h3>
-      <p>Before swine, I worked on beef-cattle thermotolerance with Dr. Raluca Mateescu — mapping how breed composition and genetics shape the skin and epidermis properties that help cattle withstand heat stress.</p>
+      <p class="eyebrow" data-i18n="earlier.eyebrow">Master's research · University of Florida</p>
+      <h3 data-i18n="earlier.h3">Breed composition &amp; GWAS for heat tolerance in Angus-Brahman cattle</h3>
+      <p data-i18n="earlier.p">Before swine, I worked on beef-cattle thermotolerance with Dr. Raluca Mateescu — mapping how breed composition and genetics shape the skin and epidermis properties that help cattle withstand heat stress.</p>
       <div class="earlier-links">
-        <a href="https://ufdc.ufl.edu/UFE0060036/00001/pdf" target="_blank" rel="noopener">Read the thesis →</a>
+        <a href="https://ufdc.ufl.edu/UFE0060036/00001/pdf" target="_blank" rel="noopener" data-i18n="earlier.link">Read the thesis →</a>
       </div>
     </div>
   </section>
 
   <!-- WATCH -->
   <section class="block reveal" id="watch">
-    <div class="sec-head"><p class="eyebrow">Science communication</p><h2>The research, in about a minute.</h2></div>
+    <div class="sec-head"><p class="eyebrow" data-i18n="watch.eyebrow">Science communication</p><h2 data-i18n="watch.h2">The research, in about a minute.</h2></div>
     <div class="watch-grid">
       <div class="short">
         <iframe src="https://www.youtube.com/embed/i5Nq-O_YEew" title="Andrea Núñez Andrade — social genetic effects, science short" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
       </div>
       <div class="watch-copy">
-        <p>A short take on my research — social genetic effects, explained for anyone, not just quantitative geneticists. Explaining the work plainly is part of how I think it should be done.</p>
-        <a class="watch-link" href="https://www.youtube.com/shorts/i5Nq-O_YEew" target="_blank" rel="noopener">Watch on YouTube →</a>
+        <p data-i18n="watch.p">A short take on my research — social genetic effects, explained for anyone, not just quantitative geneticists. Explaining the work plainly is part of how I think it should be done.</p>
+        <a class="watch-link" href="https://www.youtube.com/shorts/i5Nq-O_YEew" target="_blank" rel="noopener" data-i18n="watch.link">Watch on YouTube →</a>
       </div>
     </div>
   </section>
 
   <!-- TOOLBOX -->
   <section class="block reveal" id="tools">
-    <div class="sec-head"><p class="eyebrow">Toolbox</p><h2>What the work is built with.</h2></div>
+    <div class="sec-head"><p class="eyebrow" data-i18n="tools.eyebrow">Toolbox</p><h2 data-i18n="tools.h2">What the work is built with.</h2></div>
     <div class="tool-grid">
       <div class="tool-col">
-        <h3>Models &amp; methods</h3>
+        <h3 data-i18n="tools.methods">Models &amp; methods</h3>
         <div class="tags">
-          <span>Social genetic effects</span><span>ssGBLUP</span><span>Mixed models</span>
-          <span>Variance components</span><span>Genetic correlations</span>
-          <span>Likelihood ratio tests</span><span>GWAS</span><span>GRM construction</span>
+          <span data-i18n="tag.sge">Social genetic effects</span><span>ssGBLUP</span><span data-i18n="tag.mixed">Mixed models</span>
+          <span data-i18n="tag.varcomp">Variance components</span><span data-i18n="tag.gencorr">Genetic correlations</span>
+          <span data-i18n="tag.lrt">Likelihood ratio tests</span><span>GWAS</span><span data-i18n="tag.grm">GRM construction</span>
         </div>
       </div>
       <div class="tool-col">
-        <h3>Software</h3>
+        <h3 data-i18n="tools.software">Software</h3>
         <div class="tags">
           <span>ASReml-SA</span><span>R</span><span>Quarto</span><span>PLINK</span>
           <span>BLUPF90</span><span>tidyverse</span><span>Git</span>
         </div>
       </div>
       <div class="tool-col">
-        <h3>Domains</h3>
+        <h3 data-i18n="tools.domains">Domains</h3>
         <div class="tags">
-          <span>Swine genetics</span><span>Beef cattle genetics</span><span>Precision livestock data</span>
-          <span>Animal welfare</span><span>Breeding program design</span>
-          <span>Livestock traceability</span>
+          <span data-i18n="tag.swine">Swine genetics</span><span data-i18n="tag.beef">Beef cattle genetics</span><span data-i18n="tag.precision">Precision livestock data</span>
+          <span data-i18n="tag.welfare">Animal welfare</span><span data-i18n="tag.bpd">Breeding program design</span>
+          <span data-i18n="tag.trace">Livestock traceability</span>
         </div>
       </div>
     </div>
@@ -615,29 +628,29 @@
 
   <!-- SERVICE / WRITING -->
   <section class="block reveal" id="service">
-    <div class="sec-head"><p class="eyebrow">Beyond the model</p><h2>Reviewing, presenting, writing.</h2></div>
+    <div class="sec-head"><p class="eyebrow" data-i18n="svc.eyebrow">Beyond the model</p><h2 data-i18n="svc.h2">Reviewing, presenting, writing.</h2></div>
     <div class="svc">
       <div>
-        <div class="k">Peer review</div>
+        <div class="k" data-i18n="svc1.k">Peer review</div>
         <h4>Genetics Selection Evolution</h4>
-        <p>Reviewer for the journal, on topics from feed-intake rhythms to quantitative-genetic methodology.</p>
+        <p data-i18n="svc1.p">Reviewer for the journal, on topics from feed-intake rhythms to quantitative-genetic methodology.</p>
       </div>
       <div>
-        <div class="k">Conferences</div>
+        <div class="k" data-i18n="svc2.k">Conferences</div>
         <h4>NSIF · WCGALP 2026</h4>
-        <p>Presenter at NSIF. Attending WCGALP 2026 — if you're there, let's connect.</p>
+        <p data-i18n="svc2.p">Presenter at NSIF. Attending WCGALP 2026 — if you're there, let's connect.</p>
       </div>
       <a href="https://substack.com/@itsmeandreanicole" target="_blank" rel="noopener">
-        <div class="k">Science writing</div>
+        <div class="k" data-i18n="svc3.k">Science writing</div>
         <h4>It's Me, Andrea Nicole</h4>
-        <p>A Substack where the notebook habit meets the research life.</p>
-        <span class="arrow">Read →</span>
+        <p data-i18n="svc3.p">A Substack where the notebook habit meets the research life.</p>
+        <span class="arrow" data-i18n="svc3.arrow">Read →</span>
       </a>
       <a href="https://senasa.gob.hn/" target="_blank" rel="noopener">
-        <div class="k">Background</div>
+        <div class="k" data-i18n="svc4.k">Background</div>
         <h4>SENASA, Honduras</h4>
-        <p>Former director of the National Livestock Traceability System — genetics grounded in real herd operations.</p>
-        <span class="arrow">Visit →</span>
+        <p data-i18n="svc4.p">Former director of the National Livestock Traceability System — genetics grounded in real herd operations.</p>
+        <span class="arrow" data-i18n="svc4.arrow">Visit →</span>
       </a>
     </div>
   </section>
@@ -646,11 +659,11 @@
 <!-- CONTACT -->
 <section class="contact reveal" id="contact">
   <div class="wrap">
-    <p class="eyebrow">Get in touch</p>
-    <h2>Open to collaboration, questions, and good data.</h2>
-    <p>Working on social effects, breeding-program design, or precision-livestock data? Let's talk.</p>
+    <p class="eyebrow" data-i18n="contact.eyebrow">Get in touch</p>
+    <h2 data-i18n="contact.h2">Open to collaboration, questions, and good data.</h2>
+    <p data-i18n="contact.p">Working on social effects, breeding-program design, or precision-livestock data? Let's talk.</p>
     <div class="contact-links">
-      <a class="primary" href="mailto:anunez@iastate.edu">Email</a>
+      <a class="primary" href="mailto:anunez@iastate.edu" data-i18n="contact.email">Email</a>
       <a href="https://github.com/andy0788" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/anunezandrade" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://orcid.org/0009-0000-5536-6665" target="_blank" rel="noopener">ORCID</a>
@@ -661,7 +674,7 @@
 
 <footer>
   <div class="wrap foot-inner">
-    <span>Ames, Iowa · <b>Animal Breeding &amp; Genetics</b></span>
+    <span data-i18n="footer">Ames, Iowa · <b>Animal Breeding &amp; Genetics</b></span>
   </div>
 </footer>
 
@@ -741,6 +754,30 @@
   const bar = document.getElementById('topbar');
   const onScroll = ()=> bar.classList.toggle('scrolled', window.scrollY > 20);
   onScroll(); window.addEventListener('scroll', onScroll, {passive:true});
+})();
+</script>
+<script>
+/* ---------- language switcher ---------- */
+(function(){
+  const T = { "es": {"nav.profile": "Perfil", "nav.research": "Investigación", "nav.watch": "Video", "nav.toolbox": "Herramientas", "nav.writing": "Escritura", "nav.contact": "Contacto", "hero.eyebrow": "Genética cuantitativa · Iowa State University", "hero.badge": "<span class=\"pulse\"></span>Asistiré al WCGALP 2026 — conectemos", "hero.h1": "La genética de <em>convivir</em>.", "hero.standfirst": "Soy <b>Andrea Núñez Andrade</b>, candidata a doctorado en mejora genética animal que estudia los <b>efectos genéticos sociales</b>: cómo los genes de un animal se proyectan hacia afuera y moldean el tiempo de alimentación, la competencia por el espacio en el comedero y los caracteres maternos del grupo que lo rodea.", "herolink.research": "<span class=\"dot\"></span>Investigación", "herolink.contact": "<span class=\"dot\"></span>Contacto", "fig1n": "Gran escala", "fig1l": "Datos gestionados de principio a fin", "fig2n": "Alimentación", "fig2l": "Datos de comederos automáticos · medidas repetidas", "fig3n": "Reproducción", "fig3l": "Datos productivos de cerdas · medidas repetidas", "about.eyebrow": "Perfil", "about.h2": "De los sistemas nacionales de trazabilidad a los efectos genéticos sociales.", "about.p1": "Construyo modelos estadísticos que separan el efecto genético <b>directo</b> de un animal de su efecto <b>social</b>: la parte del desempeño de sus vecinos que se debe a sus propios genes.", "about.p2": "Mi tesis aplica esta idea en poblaciones porcinas comerciales: tiempo de alimentación y competencia por el espacio en el comedero registrados por comederos automáticos, caracteres maternos en cerdas gestantes alojadas en grupo, y una búsqueda genómica de las regiones que impulsan ambos, en colaboración con <b>PIC</b> y <b>Topigs Norsvin</b>.", "about.p3": "Crecí en Tegucigalpa, Honduras, y me formé como agrónoma en la <b>Universidad Zamorano</b> bajo su filosofía «Aprender Haciendo». Tras dirigir el <b>Sistema Nacional de Trazabilidad Pecuaria</b> de Honduras en SENASA, llegué a la Universidad de Florida para una maestría en genética animal con la Dra. Raluca Mateescu.", "about.p4": "En el camino he acompañado a estudiantes internacionales a través de la red de exalumnos de Zamorano y mantengo un pequeño Substack sobre ciencia y escritura.", "edu.h": "Formación", "collab.h": "Colaboradores", "degree1": "Doctorado, Mejora Genética Animal", "degree2": "Maestría, Ciencias Animales", "degree3": "Maestría, Gestión de Proyectos", "degree4": "Ing., Agronomía", "edu1note": " · prev. 2026 · dir. J.P. Steibel", "edu2note": " · dir. R. Mateescu", "edu3note": ", Honduras · planificación y ejecución de proyectos de investigación", "edu4note": " · Aprender Haciendo · Panamericana, +80 años", "collab1note": "Mejora genética — porcino", "collab2note": "Datos de mejora comercial", "research.eyebrow": "Tesis doctoral", "research.h2": "Tres formas de hacer la misma pregunta.", "proj1.h3": "Efectos del animal seguidor sobre la ocupación del comedero en cerdos de engorde", "proj1.p": "Con datos de comederos automáticos, modelo cómo el cerdo que come justo antes que tú —al que «sigues»— deja una huella genética en tu propio tiempo de alimentación y en la competencia por el espacio en el comedero.", "proj2.h3": "Efectos genéticos sociales sobre los caracteres maternos en cerdas gestantes alojadas en grupo", "proj2.p": "El alojamiento en grupo transforma la gestación de las cerdas. Estimo los componentes genéticos directo y social de los caracteres maternos, para evaluar si una selección que ignora a las compañeras de corral deja bienestar y productividad sin aprovechar.", "proj3.h3": "GWAS de un solo paso para los efectos genéticos directos y sociales", "proj3.p": "Un GWAS de un solo paso propuesto para mapear a la vez las regiones genómicas detrás de los componentes directo y social. <span class=\"status\">En curso.</span>", "earlier.eyebrow": "Investigación de maestría · Universidad de Florida", "earlier.h3": "Composición racial y GWAS para la tolerancia al calor en bovinos Angus-Brahman", "earlier.p": "Antes de los cerdos, trabajé en la termotolerancia de bovinos de carne con la Dra. Raluca Mateescu, mapeando cómo la composición racial y la genética moldean las propiedades de la piel y la epidermis que ayudan al ganado a soportar el estrés por calor.", "earlier.link": "Leer la tesis →", "watch.eyebrow": "Divulgación científica", "watch.h2": "La investigación, en cerca de un minuto.", "watch.p": "Una mirada breve a mi investigación —los efectos genéticos sociales— explicada para cualquiera, no solo para especialistas en genética cuantitativa. Explicar el trabajo con claridad es parte de cómo creo que debe hacerse.", "watch.link": "Ver en YouTube →", "tools.eyebrow": "Herramientas", "tools.h2": "Con qué está hecho el trabajo.", "tools.methods": "Modelos y métodos", "tools.software": "Software", "tools.domains": "Áreas", "tag.sge": "Efectos genéticos sociales", "tag.mixed": "Modelos mixtos", "tag.varcomp": "Componentes de varianza", "tag.gencorr": "Correlaciones genéticas", "tag.lrt": "Pruebas de razón de verosimilitud", "tag.grm": "Construcción de GRM", "tag.swine": "Genética porcina", "tag.beef": "Genética de bovinos de carne", "tag.precision": "Datos de ganadería de precisión", "tag.welfare": "Bienestar animal", "tag.bpd": "Diseño de programas de mejora", "tag.trace": "Trazabilidad pecuaria", "svc.eyebrow": "Más allá del modelo", "svc.h2": "Revisar, presentar, escribir.", "svc1.k": "Revisión por pares", "svc1.p": "Revisora de la revista, en temas que van desde los ritmos de consumo de alimento hasta la metodología de la genética cuantitativa.", "svc2.k": "Congresos", "svc2.p": "Ponente en el NSIF. Asistiré al WCGALP 2026: si estás allí, conectemos.", "svc3.k": "Escritura científica", "svc3.p": "Un Substack donde el hábito del cuaderno se encuentra con la vida investigadora.", "svc3.arrow": "Leer →", "svc4.k": "Trayectoria", "svc4.p": "Exdirectora del Sistema Nacional de Trazabilidad Pecuaria: genética con los pies en las operaciones ganaderas reales.", "svc4.arrow": "Visitar →", "contact.eyebrow": "Contacto", "contact.h2": "Abierta a colaboraciones, preguntas y buenos datos.", "contact.p": "¿Trabajas en efectos sociales, diseño de programas de mejora o datos de ganadería de precisión? Hablemos.", "contact.email": "Correo", "footer": "Ames, Iowa · <b>Mejora Genética Animal</b>"} };
+  const nodes = document.querySelectorAll('[data-i18n]');
+  const EN = {};
+  nodes.forEach(n => EN[n.getAttribute('data-i18n')] = n.innerHTML);
+  const AVAIL = ['en','es'];
+  function setLang(lang){
+    if(!AVAIL.includes(lang)) lang = 'en';
+    document.documentElement.lang = lang;
+    nodes.forEach(n => {
+      const k = n.getAttribute('data-i18n');
+      n.innerHTML = (lang === 'en') ? EN[k] : ((T[lang] && T[lang][k] != null) ? T[lang][k] : EN[k]);
+    });
+    document.querySelectorAll('.langbtn').forEach(b => b.classList.toggle('on', b.dataset.lang === lang));
+    try { localStorage.setItem('site-lang', lang); } catch(e){}
+  }
+  window.__setLang = setLang;
+  let saved = 'en';
+  try { saved = localStorage.getItem('site-lang') || 'en'; } catch(e){}
+  setLang(saved);
 })();
 </script>
 </body>
