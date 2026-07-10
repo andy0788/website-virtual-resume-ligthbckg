@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Andrea Núñez Andrade — Quantitative Genetics (light preview)</title>
+<title>Andrea Núñez Andrade — Quantitative Genetics (cream)</title>
 <meta name="description" content="Andrea Núñez Andrade — PhD candidate in Animal Breeding & Genetics at Iowa State University, studying social genetic effects in livestock.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -381,57 +381,70 @@
     .grain{animation:none}
   }
 
+  /* ---------- larger, more readable type (dark theme) ---------- */
+  .eyebrow{font-size:.85rem}
+  .brand{font-size:.85rem}
+  .topnav a{font-size:.82rem}
+  .standfirst{font-size:clamp(1.2rem,1.8vw,1.4rem)}
+  .badge{font-size:.82rem}
+  .hero-links a{font-size:.9rem}
+  .slate{font-size:.72rem}
+  .fig .n{font-size:clamp(1.9rem,3.4vw,2.7rem)}
+  .fig .l{font-size:.82rem}
+  .sec-head h2{font-size:clamp(2.1rem,4.4vw,3rem)}
+  .about-body p{font-size:1.26rem;line-height:1.7}
+  .about-body p:first-child{font-size:1.46rem}
+  .card h3{font-size:.9rem}
+  .rowlist li{font-size:1.12rem}
+  .rowlist li span{font-size:.98rem}
+  .proj-no{font-size:clamp(2.2rem,5vw,3.6rem)}
+  .proj h3{font-size:clamp(1.4rem,2.7vw,1.85rem)}
+  .proj p{font-size:1.2rem;line-height:1.7}
+  .earlier h3{font-size:clamp(1.25rem,2.3vw,1.6rem)}
+  .earlier p{font-size:1.15rem}
+  .earlier-links a{font-size:.9rem}
+  .watch-copy p{font-size:1.22rem;line-height:1.7}
+  .watch-link{font-size:.92rem}
+  .tool-col h3{font-size:.86rem}
+  .tags span{font-size:1.02rem}
+  .svc .k{font-size:.82rem}
+  .svc h4{font-size:1.42rem}
+  .svc p{font-size:1.12rem}
+  .contact p{font-size:1.22rem}
+  .contact-links a{font-size:.95rem}
+  .foot-inner{font-size:.82rem}
+
+
   /* =====================================================
-     LIGHT / CREAM THEME  (preview variant)
+     LIGHT / CREAM THEME  (standalone variant)
+     Cream page + dark text below the hero. The hero stays
+     dark because it sits over the video.
      ===================================================== */
   :root{
     --ink:#f4efe4; --ink-raise:#fffdf7; --ink-line:#e3dbca;
     --bone:#233029; --bone-dim:#4f584f; --sage:#4a6d59;
     --amber:#b97d1e; --amber-soft:rgba(201,132,31,.14);
   }
-  .topbar{background:rgba(18,28,22,.9)}
+  .topbar{background:rgba(18,28,22,.92)}
   .topbar.scrolled{border-bottom-color:rgba(255,255,255,.08)}
   .brand{color:#f2eee3}
   .brand span{color:#e6a94a}
-  .topnav a{color:#c3ccbf;font-size:.78rem}
+  .topnav a{color:#c3ccbf}
   .topnav a:hover{color:#e6a94a}
   .hero .eyebrow{color:#a6c0a8}
   h1{color:#f5f1e7}
   h1 em{color:#e6a94a}
-  .standfirst{color:#d6dbcf;font-size:clamp(1.12rem,1.7vw,1.32rem)}
+  .standfirst{color:#d6dbcf}
   .standfirst b{color:#fbf8f0}
-  .badge{color:#f2eee3;border-color:rgba(242,238,227,.3);background:rgba(226,166,63,.14);font-size:.76rem}
+  .badge{color:#f2eee3;border-color:rgba(242,238,227,.3);background:rgba(226,166,63,.14)}
   .badge:hover{border-color:#e6a94a;color:#e6a94a}
-  .hero-links a{color:#f2eee3;border-color:rgba(242,238,227,.3);font-size:.82rem}
+  .hero-links a{color:#f2eee3;border-color:rgba(242,238,227,.3)}
   .hero-links a .dot{background:#a6c0a8}
   .hero-links a:hover{color:#e6a94a;border-color:#e6a94a;background:rgba(226,166,63,.14)}
   .hero-links a:hover .dot{background:#e6a94a}
   .slate{color:#c3ccbf}
   .contact-links a.primary{background:#c8841f;color:#1c2a22;border-color:#c8841f}
   .contact-links a.primary:hover{background:var(--bone);color:#f4efe4;border-color:var(--bone)}
-  .eyebrow{font-size:.78rem}
-  .about-body p{font-size:1.16rem}
-  .about-body p:first-child{font-size:1.34rem}
-  .rowlist li{font-size:1.02rem}
-  .rowlist li span{font-size:.9rem}
-  .card h3{font-size:.82rem}
-  .sec-head h2{font-size:clamp(2.05rem,4.2vw,2.9rem)}
-  .proj h3{font-size:clamp(1.35rem,2.6vw,1.75rem)}
-  .proj p{font-size:1.1rem}
-  .earlier p{font-size:1.06rem}
-  .earlier-links a{font-size:.82rem}
-  .watch-copy p{font-size:1.12rem}
-  .watch-link{font-size:.84rem}
-  .tool-col h3{font-size:.78rem}
-  .tags span{font-size:.94rem}
-  .svc .k{font-size:.74rem}
-  .svc h4{font-size:1.3rem}
-  .svc p{font-size:1.03rem}
-  .fig .l{font-size:.75rem}
-  .fig .n{font-size:clamp(1.7rem,3.2vw,2.5rem)}
-  .contact p{font-size:1.12rem}
-  .contact-links a{font-size:.86rem}
-  .foot-inner{font-size:.76rem}
 
 </style>
 </head>
@@ -496,16 +509,16 @@
       <div class="about-body">
         <p>I build statistical models that separate an animal's <b>direct</b> genetic effect from its <b>social</b> one — the part of its neighbors' performance that traces back to its own genes.</p>
         <p>My dissertation applies this idea across commercial swine populations: feeding time and competition for feeder space captured by automatic feeders, maternal traits in group-housed gestating sows, and a genomic search for the regions that drive both, in collaboration with <b>PIC</b> and <b>Topigs Norsvin</b>.</p>
-        <p>I grew up in Tegucigalpa, Honduras, and trained as an agronomist at <b>Zamorano University</b>, where "Learn by Doing" is the whole philosophy. After three years directing Honduras's <b>National Livestock Traceability System</b> at SENASA, I came to the University of Florida — first to learn English, then to earn a master's in animal genetics with Dr. Raluca Mateescu.</p>
-        <p>Along the way I've mentored international students through the Zamorano alumni network, and kept close to writing — a habit from a childhood full of books and notebooks that now lives on a small Substack.</p>
+        <p>I grew up in Tegucigalpa, Honduras, and trained as an agronomist at <b>Zamorano University</b> under its "Learn by Doing" philosophy. After directing Honduras's <b>National Livestock Traceability System</b> at SENASA, I came to the University of Florida for a master's in animal genetics with Dr. Raluca Mateescu.</p>
+        <p>Along the way I've mentored international students through the Zamorano alumni network and kept a small Substack on science and writing.</p>
       </div>
       <div class="about-side">
         <aside class="card">
           <h3>Education</h3>
         <ul class="rowlist">
-          <li>PhD, Animal Breeding &amp; Genetics<span>Iowa State University · exp. 2026 · adv. J.P. Steibel</span></li>
-          <li>M.S., Animal Sciences<span>University of Florida · adv. R. Mateescu</span></li>
-          <li>M.S., Project Management<span>UNITEC, Honduras</span></li>
+          <li>PhD, Animal Breeding &amp; Genetics<span><a href="https://www.ans.iastate.edu/people/andrea-nunez" target="_blank" rel="noopener">Iowa State University</a> · exp. 2026 · adv. J.P. Steibel</span></li>
+          <li>M.S., Animal Sciences<span><a href="https://animal.ifas.ufl.edu/" target="_blank" rel="noopener">University of Florida</a> · adv. R. Mateescu</span></li>
+          <li>M.S., Project Management<span><a href="https://www.unitec.edu/estudios/postgrado/administracion-de-proyectos/" target="_blank" rel="noopener">UNITEC</a>, Honduras · planning and delivering research projects</span></li>
           <li>B.S., Agronomy<span><a href="https://zamorano.edu/en/" target="_blank" rel="noopener">Zamorano University</a> · Learn by Doing · Pan-American, 80+ yrs</span></li>
         </ul>
         <h3>Collaborators</h3>
@@ -526,7 +539,7 @@
       <div class="proj-no">01</div>
       <div>
         <h3>Follower effects on feeder occupation in finishing pigs</h3>
-        <p>Using high-frequency automatic feeder data, I model how the pig that feeds just before you — the one you "follow" — leaves a genetic fingerprint on your own feeder-visit duration, quantifying social genetic effects on feeding time and competition for feeder space.</p>
+        <p>Using automatic feeder data, I model how the pig that feeds just before you — the one you "follow" — leaves a genetic fingerprint on your own feeding time and competition for feeder space.</p>
       </div>
     </article>
 
@@ -534,7 +547,7 @@
       <div class="proj-no">02</div>
       <div>
         <h3>Social genetic effects on maternal traits in group-housed gestating sows</h3>
-        <p>Group housing changes how sows experience gestation. I estimate variance components and direct–social genetic correlations for maternal traits, testing whether selection that ignores pen-mates leaves welfare and productivity on the table.</p>
+        <p>Group housing reshapes gestation for sows. I estimate the direct and social genetic components of maternal traits, testing whether selection that ignores pen-mates leaves welfare and productivity on the table.</p>
       </div>
     </article>
 
@@ -542,14 +555,14 @@
       <div class="proj-no">03</div>
       <div>
         <h3>Single-step GWAS for direct and social genetic effects</h3>
-        <p>A proposed single-step GWAS that maps the genomic regions underlying <em>both</em> the direct and social components at once — connecting the quantitative models above to the biology that produces them. <span class="status">In progress.</span></p>
+        <p>A proposed single-step GWAS to map the genomic regions behind both the direct and social components at once. <span class="status">In progress.</span></p>
       </div>
     </article>
 
     <div class="earlier">
       <p class="eyebrow">Master's research · University of Florida</p>
       <h3>Breed composition &amp; GWAS for heat tolerance in Angus-Brahman cattle</h3>
-      <p>Before swine, I worked on beef-cattle thermotolerance with Dr. Raluca Mateescu — mapping how breed composition and genetics shape the skin and epidermis properties that help cattle withstand heat stress. The work became my first-author paper in the <em>Journal of Animal Science</em> (2022).</p>
+      <p>Before swine, I worked on beef-cattle thermotolerance with Dr. Raluca Mateescu — mapping how breed composition and genetics shape the skin and epidermis properties that help cattle withstand heat stress.</p>
       <div class="earlier-links">
         <a href="https://ufdc.ufl.edu/UFE0060036/00001/pdf" target="_blank" rel="noopener">Read the thesis →</a>
       </div>
@@ -592,7 +605,7 @@
       <div class="tool-col">
         <h3>Domains</h3>
         <div class="tags">
-          <span>Swine genetics</span><span>Precision livestock data</span>
+          <span>Swine genetics</span><span>Beef cattle genetics</span><span>Precision livestock data</span>
           <span>Animal welfare</span><span>Breeding program design</span>
           <span>Livestock traceability</span>
         </div>
@@ -620,11 +633,12 @@
         <p>A Substack where the notebook habit meets the research life.</p>
         <span class="arrow">Read →</span>
       </a>
-      <div>
+      <a href="https://senasa.gob.hn/" target="_blank" rel="noopener">
         <div class="k">Background</div>
         <h4>SENASA, Honduras</h4>
         <p>Former director of the National Livestock Traceability System — genetics grounded in real herd operations.</p>
-      </div>
+        <span class="arrow">Visit →</span>
+      </a>
     </div>
   </section>
 </main>
@@ -647,7 +661,6 @@
 
 <footer>
   <div class="wrap foot-inner">
-    <span>Andrea Núñez Andrade — <b>Andy</b></span>
     <span>Ames, Iowa · <b>Animal Breeding &amp; Genetics</b></span>
   </div>
 </footer>
